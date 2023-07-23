@@ -1,4 +1,4 @@
-import React, { useSate, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ function ShowBookList() {
 
   useEffect(() => {
     axios
-      .get('http:localhost:8082/api/books')
+      .get('http://localhost:3001/api/books')
       .then((res) => {
         setBooks(res.data);
       })
