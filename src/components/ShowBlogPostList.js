@@ -3,25 +3,28 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BookCard from './BookCard';
+import BlogPost from './BlogPost';
 
-function ShowBookList() {
-  const [books, setBooks] = useState([]);
+function ShowBlogPostList() {
+  const [blogPosts, setBlogPosts] = useState([]);
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/api/books')
+      .get('http://localhost:3001/api/blogPosts')
       .then((res) => {
-        setBooks(res.data);
+        setBlogPosts(res.data);
       })
       .catch((err) => {
         console.log('Error from ShowBookList');
       });
   }, []);
 
-  const bookList =
-    books.length === 0
+  const blogPostList =
+    blogPosts.length === 0
       ? 'there is not book record!'
-      : books.map((book, k) => <BookCard book={book} key={k} />);
+      : blogPosts.map((blogPost, k) => (
+          <BlogPost blogPost={blogPost} key={k} />
+        ));
 
   return (
     <div className='ShowBookList'>
@@ -34,7 +37,7 @@ function ShowBookList() {
 
           <div className='col-md-11'>
             <Link
-              to='/create-book'
+              to='/create-blog-post'
               className='btn btn-outline-warning float-right'
             >
               + Add New Book
@@ -44,10 +47,10 @@ function ShowBookList() {
             <br />
           </div>
         </div>
-        <div className='list'>{bookList}</div>
+        <div className='list'>{blogPostList}</div>
       </div>
     </div>
   );
 }
 
-export default ShowBookList;
+export default ShowBlogPostList;
