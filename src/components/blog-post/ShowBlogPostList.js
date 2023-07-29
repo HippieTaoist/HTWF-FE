@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import BookCard from './BookCard';
 import BlogPost from './BlogPost';
 
 function ShowBlogPostList() {
@@ -10,7 +9,7 @@ function ShowBlogPostList() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/api/blogPosts')
+      .get('http://localhost:3001/api/blogposts')
       .then((res) => {
         setBlogPosts(res.data);
       })
