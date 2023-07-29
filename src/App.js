@@ -2,15 +2,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 //Import from  BlogPost Component Folder
-import CreateBlogPost from './components/BlogPost/CreateBlogPost';
-import ShowBlogPostList from './components/BlogPost/ShowBlogPostList';
-import ShowBlogPostDetails from './components/BlogPost/ShowBlogPostDetails';
+import CreateBlogPost from './components/blog-post/CreateBlogPost';
+import ShowBlogPostList from './components/blog-post/ShowBlogPostList';
+import ShowBlogPostDetails from './components/blog-post/ShowBlogPostDetails';
 
 //Import From Book Component Folder
-import ShowBookList from './components/Book/ShowBookList';
-import ShowBookDetails from './components/Book/ShowBookDetails';
-import UpdateBookInfo from './components/Book/UpdateBookInfo';
-import UpdateBlogPost from './components/Book/UpdateBlogPost';
+import ShowBookList from './components/book/ShowBookList';
+import ShowBookDetails from './components/book/ShowBookDetails';
+import UpdateBookInfo from './components/book/UpdateBookInfo';
+import UpdateBlogPost from './components/book/UpdateBlogPost';
 
 const App = () => {
   return (
