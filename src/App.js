@@ -2,15 +2,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 //Import from  BlogPost Component Folder
-import CreateBlogPost from './components/blog-post/CreateBlogPost';
-import ShowBlogPostList from './components/blog-post/ShowBlogPostList';
-import ShowBlogPostDetails from './components/blog-post/ShowBlogPostDetails';
+import CreateBlogPost from './components/blog-post/BlogPost-Create';
+import ShowBlogPostList from './components/blog-post/BlogPost-List';
+import ShowBlogPostDetails from './components/blog-post/BlogPost-Details';
+import UpdateBlogPost from './components/blog-post/BlogPost-Update';
 
 //Import From Book Component Folder
-import ShowBookList from './components/book/ShowBookList';
-import ShowBookDetails from './components/book/ShowBookDetails';
-import UpdateBookInfo from './components/book/UpdateBookInfo';
-import UpdateBlogPost from './components/book/UpdateBlogPost';
+import ShowBookList from './components/book/Book-List';
+import ShowBookDetails from './components/book/Book-Details';
+import UpdateBookInfo from './components/book/Book-Update';
 
 const App = () => {
   return (
@@ -18,10 +18,17 @@ const App = () => {
       <div>
         <Routes>
           <Route exact path='/' element={<ShowBlogPostList />} />
-          <Route path='/create-blog-post' element={<CreateBlogPost />} />
-          <Route path='/edit-book/:id' element={<UpdateBookInfo />} />
-          <Route path='/update-blog-post/:id' element={<UpdateBlogPost />} />
-          <Route path='/show-blog-post/:id' element={<ShowBlogPostDetails />} />
+          {/* Blog Post Routes */}
+          <Route exact path='/blog-posts' element={<ShowBlogPostList />} />
+          <Route path='/blog-post/create' element={<CreateBlogPost />} />
+          <Route path='/blog-post/show/:id' element={<ShowBlogPostDetails />} />
+          <Route path='/blog-post/update/:id' element={<UpdateBlogPost />} />
+          {/* Book Route */}
+          <Route exact path='/books' element={<ShowBookList />} />
+          <Route path='/book/create/:id' element={<UpdateBookInfo />} />
+          <Route path='/book/show/:id' element={<UpdateBookInfo />} />
+          <Route path='/book/update:id' element={<UpdateBookInfo />} />
+          <Route path='/book/delete/:id' element={<UpdateBookInfo />} />
         </Routes>
       </div>
     </Router>

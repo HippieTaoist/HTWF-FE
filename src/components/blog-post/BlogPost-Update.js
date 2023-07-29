@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../App.css';
+import '../../App.css';
 
-function UpdateBookInfo(props) {
-  const [book, setBook] = useState({
+function UpdateBlogPost(props) {
+  const [blogPost, setBlogPost] = useState({
+    main_img: '',
     title: '',
-    isbn: '',
     author: '',
-    description: '',
+    post_body: '',
     published_date: '',
     publisher: '',
   });
@@ -18,61 +18,61 @@ function UpdateBookInfo(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/api/books/${id}`)
+      .get(`http://localhost:8082/api/blogposts/${id}`)
       .then((res) => {
-        setBook({
+        setBlogPost({
+          main_img: res.main_img,
           title: res.data.title,
-          isbn: res.data.isbn,
           author: res.data.author,
-          description: res.data.description,
+          post_body: res.data.post_body,
           published_date: res.data.published_date,
           publisher: res.data.publisher,
         });
       })
       .catch((err) => {
-        console.log('Error from UpdateBookInfo');
+        console.log('Error from UpdateBlogPost');
       });
   }, [id]);
 
   const onChange = (e) => {
-    setBook({ ...book, [e.target.name]: e.target.value });
+    setBlogPost({ ...blogPost, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
 
     const data = {
-      title: book.title,
-      isbn: book.isbn,
-      author: book.author,
-      description: book.description,
-      published_date: book.published_date,
-      publisher: book.publisher,
+      main_img: blogPost.main_img,
+      title: blogPost.title,
+      author: blogPost.author,
+      post_body: blogPost.post_body,
+      published_date: blogPost.published_date,
+      publisher: blogPost.publisher,
     };
 
     axios
-      .put(`http://localhost:8082/api/books/${id}`, data)
+      .put(`http://localhost:8082/api/blogposts/${id}`, data)
       .then((res) => {
-        navigate(`/show-book/${id}`);
+        navigate(`/show-blogPost/${id}`);
       })
       .catch((err) => {
-        console.log('Error in UpdateBookInfo!');
+        console.log('Error in UpdateblogPost!');
       });
   };
 
   return (
-    <div className='UpdateBookInfo'>
+    <div className='UpdateBlogPost'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-8 m-auto'>
             <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              Show BooK List
+              Show blogPost List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
-            <h1 className='display-4 text-center'>Edit Book</h1>
-            <p className='lead text-center'>Update Book's Info</p>
+            <h1 className='display-4 text-center'>Edit blogPost</h1>
+            <p className='lead text-center'>Update blogPost's Info</p>
           </div>
         </div>
 
@@ -82,23 +82,23 @@ function UpdateBookInfo(props) {
               <label htmlFor='title'>Title</label>
               <input
                 type='text'
-                placeholder='Title of the Book'
+                placeholder='Title of the blogPost'
                 name='title'
                 className='form-control'
-                value={book.title}
+                value={blogPost.title}
                 onChange={onChange}
               />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='isbn'>ISBN</label>
+              <label htmlFor='main_img'>Main Image</label>
               <input
-                type='text'
-                placeholder='ISBN'
-                name='isbn'
+                type='main_img'
+                placeholder='Main Img'
+                name='main_img'
                 className='form-control'
-                value={book.isbn}
+                value={blogPost.main_img}
                 onChange={onChange}
               />
             </div>
@@ -111,20 +111,20 @@ function UpdateBookInfo(props) {
                 placeholder='Author'
                 name='author'
                 className='form-control'
-                value={book.author}
+                value={blogPost.author}
                 onChange={onChange}
               />
             </div>
             <br />
 
             <div className='form-group'>
-              <label htmlFor='description'>Description</label>
+              <label htmlFor='post_body'>Post Body</label>
               <textarea
                 type='text'
-                placeholder='Description of the Book'
-                name='description'
+                placeholder='post_body of the blogPost'
+                name='post_body'
                 className='form-control'
-                value={book.description}
+                value={blogPost.post_body}
                 onChange={onChange}
               />
             </div>
@@ -137,7 +137,7 @@ function UpdateBookInfo(props) {
                 placeholder='Published Date'
                 name='published_date'
                 className='form-control'
-                value={book.published_date}
+                value={blogPost.published_date}
                 onChange={onChange}
               />
             </div>
@@ -147,10 +147,10 @@ function UpdateBookInfo(props) {
               <label htmlFor='publisher'>Publisher</label>
               <input
                 type='text'
-                placeholder='Publisher of the Book'
+                placeholder='Publisher of the blogPost'
                 name='publisher'
                 className='form-control'
-                value={book.publisher}
+                value={blogPost.publisher}
                 onChange={onChange}
               />
             </div>
@@ -160,7 +160,7 @@ function UpdateBookInfo(props) {
               type='submit'
               className='btn btn-outline-info btn-lg btn-block'
             >
-              Update Book
+              Update blogPost
             </button>
           </form>
         </div>
@@ -169,4 +169,4 @@ function UpdateBookInfo(props) {
   );
 }
 
-export default UpdateBookInfo;
+export default UpdateBlogPost;
