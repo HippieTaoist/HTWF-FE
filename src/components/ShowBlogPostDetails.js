@@ -4,16 +4,16 @@ import '../App.css';
 import axios from 'axios';
 
 function ShowBlogPostDetails(props) {
-  const [blogPostDetails, setblogPostDetails] = useState({});
+  const [blogPostDetails, setBlogPostDetails] = useState({});
 
   const { id } = useParams();
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/blogPostDetailss/${id}`)
+      .get(`http://localhost:3001/api/blogposts/${id}`)
       .then((res) => {
-        setblogPostDetails(res.data);
+        setBlogPostDetails(res.data);
       })
       .catch((err) => {
         console.log('Error from ShowBlogPostDetails');
@@ -22,7 +22,7 @@ function ShowBlogPostDetails(props) {
 
   const onDeleteClick = (id) => {
     axios
-      .delete(`http://localhost:3001/api/blogPostDetailss/${id}`)
+      .delete(`http://localhost:3001/api/blogposts/${id}`)
       .then((res) => {
         navigate('/');
       })
@@ -100,7 +100,7 @@ function ShowBlogPostDetails(props) {
           </div>
           <div className='col-md-6 m-auto'>
             <Link
-              to={`/edit-blogPostDetails/${blogPostDetails._id}`}
+              to={`/update-blog-post/${blogPostDetails._id}`}
               className='btn btn-outline-info btn-lg btn-block'
             >
               Edit blogPostDetails
