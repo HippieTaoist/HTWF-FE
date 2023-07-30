@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+HippieTaoist Worm Farm - Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Purpose
+Be the consumer end of the experience for our users and customers. It will be the first hand interaction between us and our wormy family. It will be place where they come for pour products and services. Also the area where we will be able to build out theo ther aspects of our business.
 
-## Available Scripts
+# Site Areas
 
-In the project directory, you can run:
+    ## Social Media
+These areas will mainly focus around instagram and tiktok for quick clips and videos, with maybe a hint of youtube for longer videos. Still on the fence about patreon.
 
-### `npm start`
+    ## Books
+ This will be a list of links to find the book on our website or affiliated sites. There will not only be a list of books, but a description of the book as well. maybe pull some reviews from Amazon/Good Reads/Etc API's
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    ## Blog Posts
+These posts will be a draw and continued interest in the content of our blog and site. Also providing areas to present buying options to the reader. More than anything this will be a spot to start to reach out and work to help other have a successful worm farm themselves.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    ## Worm Jokes & Memes
+This area will have a list of all jokes and origins as well as a random joke generator that will serve up Memes too.
 
-### `npm test`
+    ## Worm Research
+This area will house articles and journals that have shown the benefits of vermicast and worms in general.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        ### Worm Facts
 
-### `npm run build`
+        ### Worm Applications
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        ### Worm Tips
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        ### Worm D.I.Y.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ## Worm Husbandry
+This area will be split into a few sections that refer to different areas of worm husbandry.
 
-### `npm run eject`
+        ### Worm Types
+Different worm types of which we can look into the composting effectiveness of each worm.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+        ### Worm Bedding
+Find the best bedding for your worms here and all the different ways to house your worms.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        ### Worm Feed & Diet
+What to feed and suppliment your worms diet with. Compost is great, but better when you're worms are getting what they need.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        ### Worm Bin Types
+While there are a ton of options to house your worms, deciding on the right option for your operation is not a little things. Also not set in stone. See what fits your needs here.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        ### Worm Husbandry Issues and Resolutions
+We all break shit and then we need to fix it. come tackle the most prominent issues and the solutions that we have found in our search. Find out our failings too.
 
-## Learn More
+    ## Worm Products
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        ### Farm Products
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+            #### Worms
+            #### Vermicast
+            #### Worm Tea
+            #### Plants
+            #### Seeds
+            #### Wholesale Resale
+            #### Resale Products
 
-### Code Splitting
+        ### Affiliated Products
+            #### Amazon Products
+            #### Urban Worm Company
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Application Programming Interfaces (API's)
+To come. Currently the only API that makes sense slightly is a weather api. Wanted news, but there isn't a lot of worm stories.
 
-### Analyzing the Bundle Size
+Ideas incoming...
+## Amazon API
+    Use this to build out the models to update prices on website for affiliated products.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Weather API
+    Use to help make recommendations to view based on their location.
