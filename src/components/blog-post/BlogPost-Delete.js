@@ -21,7 +21,7 @@ function DeleteBlogPost(props) {
       .get(`http://localhost:8082/api/blogposts/${id}`)
       .then((res) => {
         setBlogPost({
-            _id:res.data._id
+          _id: res.data._id,
           main_img: res.main_img,
           title: res.data.title,
           author: res.data.author,
