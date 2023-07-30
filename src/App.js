@@ -24,6 +24,8 @@ const App = () => {
           <Route path='/blog-post/create' element={<CreateBlogPost />} />
           <Route path='/blog-post/show/:id' element={<ShowBlogPostDetails />} />
           <Route path='/blog-post/update/:id' element={<UpdateBlogPost />} />
+          <Route path='/blog-post/delete/:id' element={<DeleteBlogPost />} />
+
           {/* Book Route */}
           <Route exact path='/books' element={<ShowBookList />} />
           <Route path='/book/create/:id' element={<CreateBook />} />
