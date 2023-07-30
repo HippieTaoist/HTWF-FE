@@ -11,6 +11,7 @@ import UpdateBlogPost from './components/blog-post/BlogPost-Update';
 import ShowBookList from './components/book/Book-List';
 import ShowBookDetails from './components/book/Book-Details';
 import UpdateBookInfo from './components/book/Book-Update';
+import DeleteBook from './components/book/Book-Delete';
 
 const App = () => {
   return (
@@ -25,10 +26,10 @@ const App = () => {
           <Route path='/blog-post/update/:id' element={<UpdateBlogPost />} />
           {/* Book Route */}
           <Route exact path='/books' element={<ShowBookList />} />
-          <Route path='/book/create/:id' element={<UpdateBookInfo />} />
-          <Route path='/book/show/:id' element={<UpdateBookInfo />} />
+          <Route path='/book/create/:id' element={<CreateBook />} />
+          <Route path='/book/show/:id' element={<ShowBookDetails />} />
           <Route path='/book/update:id' element={<UpdateBookInfo />} />
-          <Route path='/book/delete/:id' element={<UpdateBookInfo />} />
+          <Route path='/book/delete/:id' element={<DeleteBook />} />
         </Routes>
       </div>
     </Router>
