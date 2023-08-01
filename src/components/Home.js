@@ -29,7 +29,7 @@ function Home() {
         ));
 
   return (
-    <div className='ShowBlogPostList'>
+    <div className='Home'>
       <div className='container'>
         <div className='row'>
           <div className='col-md-12'>
