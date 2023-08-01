@@ -24,6 +24,7 @@ function ShowBlogPostDetails(props) {
     axios
       .delete(`http://localhost:3001/api/blogposts/${id}`)
       .then((res) => {
+        console.log(res);
         navigate('/');
       })
       .catch((err) => {
@@ -100,7 +101,7 @@ function ShowBlogPostDetails(props) {
           </div>
           <div className='col-md-6 m-auto'>
             <Link
-              to={`/update-blog-post/${blogPost._id}`}
+              to={`/blog-post/update/${blogPost._id}`}
               className='btn btn-outline-info btn-lg btn-block'
             >
               Edit blogPost

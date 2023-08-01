@@ -15,7 +15,7 @@ const BlogPost = (props) => {
       <div className='desc'>
         <img src={blogPost.main_img} alt={blogPost.title} />
         <h2>
-          <Link to={`/show-blog-post/${blogPost._id}`}>{blogPost.title}</Link>
+          <Link to={`/blog-post/show/${blogPost._id}`}>{blogPost.title}</Link>
         </h2>
         <h3>{blogPost.author}</h3>
         <p>{blogPost.postBody}</p>
