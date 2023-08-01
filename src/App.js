@@ -1,24 +1,37 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
+// Import Home from Component Folder
+import Home from './components/Home';
+
 //Import from  BlogPost Component Folder
 import CreateBlogPost from './components/blog-post/BlogPost-Create';
 import ShowBlogPostList from './components/blog-post/BlogPost-List';
 import ShowBlogPostDetails from './components/blog-post/BlogPost-Details';
 import UpdateBlogPost from './components/blog-post/BlogPost-Update';
+import DeleteBlogPost from './components/blog-post/BlogPost-Delete';
 
 //Import From Book Component Folder
+import CreateBook from './components/book/Book-Create';
 import ShowBookList from './components/book/Book-List';
 import ShowBookDetails from './components/book/Book-Details';
 import UpdateBookInfo from './components/book/Book-Update';
 import DeleteBook from './components/book/Book-Delete';
+
+// Import From Joke Meme Component Folder
+import CreateJokeMeme from './components/jokes-and-memes/Joke_Meme-Create';
+import ShowJokeMemeList from './components/jokes-and-memes/Joke_Meme-List';
+import ShowJokeMemeDetails from './components/jokes-and-memes/Joke_Meme-Details';
+import UpdateJokeMeme from './components/jokes-and-memes/Joke_Meme-Update';
+import DeleteJokeMeme from './components/jokes-and-memes/Joke_Meme-Delete';
 
 const App = () => {
   return (
     <Router>
       <div>
         <Routes>
-          <Route exact path='/' element={<ShowBlogPostList />} />
+          <Route exact path='/' element={<Home />} />
+
           {/* Blog Post Routes */}
           <Route exact path='/blog-posts' element={<ShowBlogPostList />} />
           <Route path='/blog-post/create' element={<CreateBlogPost />} />
@@ -32,6 +45,13 @@ const App = () => {
           <Route path='/book/show/:id' element={<ShowBookDetails />} />
           <Route path='/book/update:id' element={<UpdateBookInfo />} />
           <Route path='/book/delete/:id' element={<DeleteBook />} />
+
+          {/* Joke Meme Route */}
+          <Route exact path='/jokememes' element={<ShowJokeMemeList />} />
+          <Route path='/jokememe/create/:id' element={<CreateJokeMeme />} />
+          <Route path='/jokememe/show/:id' element={<ShowJokeMemeDetails />} />
+          <Route path='/jokememe/update:id' element={<UpdateJokeMeme />} />
+          <Route path='/jokememe/delete/:id' element={<DeleteJokeMeme />} />
         </Routes>
       </div>
     </Router>
