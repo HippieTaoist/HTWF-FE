@@ -136,4 +136,4 @@ function DeleteBlogPost(props) {
   );
 }
 
-export default UpdateBlogPost;
+export default DeleteBlogPost;
