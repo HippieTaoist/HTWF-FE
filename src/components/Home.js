@@ -34,7 +34,9 @@ function Home() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center'>Blog Posts List</h2>
+            <h2 className='display-4 text-center website-title' id=''>
+              HippieTaoist Worm Farm
+            </h2>
           </div>
 
           <div className='col-md-11'>
