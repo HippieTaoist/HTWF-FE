@@ -18,12 +18,14 @@
 }
 
 .navigation-menu {
-    margin-left: auto
+    margin-left: auto;
+
 }
 
 .navigation-menu ul {
     display: flex;
     padding: 0;
+    height: 50%;
 }
 
 .navigation-menu li {
@@ -75,7 +77,8 @@
         flex-direction: column;
         /* makes menu span full height and width stablewidth: 100%*/
         ;
-        height: calc(100vh - 77px);
+        height: auto;
+        /*calc(100vh - 77px);*/
         background-color: white;
         border-top: 1px solid black;
         display: none;

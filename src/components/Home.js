@@ -65,14 +65,15 @@ function Home() {
               perspiciatis numquam maxime.
             </article>
           </div>
-
-          <div className='col-md-11'>
-            <Link
-              to='/blog-post/create'
-              className='btn btn-outline-warning float-right'
-            >
-              + Add New Blog Post
-            </Link>
+          <div>
+            <div className='col-md-11'>
+              <Link
+                to='/blog-post/create'
+                className='btn btn-outline-warning float-right'
+              >
+                + Add New Blog Post
+              </Link>
+            </div>
             <br />
             <br />
             <br />
