@@ -1,7 +1,11 @@
+import '../styles/navbar.css';
+
 export default function Navbar() {
   return (
-    <nav>
-      Navigation
+    <nav className='navigation'>
+      <a href='/' className='brand-name'>
+        HippieTaoist Worm Farm
+      </a>
       <nav>
         <a href='#'>Books</a>
         <a href='#'>Blog</a>
