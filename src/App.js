@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
+// import './App.css';
+import './styles/styles.css';
 
 // Import Home from Component Folder
 import Home from './components/Home';
@@ -43,15 +44,15 @@ const App = () => {
           <Route exact path='/books' element={<ShowBookList />} />
           <Route path='/book/create/:id' element={<CreateBook />} />
           <Route path='/book/show/:id' element={<ShowBookDetails />} />
-          <Route path='/book/update:id' element={<UpdateBookInfo />} />
+          <Route path='/book/update/:id' element={<UpdateBookInfo />} />
           <Route path='/book/delete/:id' element={<DeleteBook />} />
 
           {/* Joke Meme Route */}
-          <Route exact path='/jokememes' element={<ShowJokeMemeList />} />
-          <Route path='/jokememe/create/:id' element={<CreateJokeMeme />} />
-          <Route path='/jokememe/show/:id' element={<ShowJokeMemeDetails />} />
-          <Route path='/jokememe/update:id' element={<UpdateJokeMeme />} />
-          <Route path='/jokememe/delete/:id' element={<DeleteJokeMeme />} />
+          <Route exact path='/joke-memes' element={<ShowJokeMemeList />} />
+          <Route path='/joke-meme/create/:id' element={<CreateJokeMeme />} />
+          <Route path='/joke-meme/show/:id' element={<ShowJokeMemeDetails />} />
+          <Route path='/joke-meme/update/:id' element={<UpdateJokeMeme />} />
+          <Route path='/joke-meme/delete/:id' element={<DeleteJokeMeme />} />
         </Routes>
       </div>
     </Router>
