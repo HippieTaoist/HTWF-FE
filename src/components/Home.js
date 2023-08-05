@@ -3,6 +3,8 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+import NavBar from './NavBar';
+
 // Import posts from sections
 import BlogPost from './blog-post/BlogPost-Card';
 import JokeMeme from './jokes-and-memes/Joke_Meme-Card';
@@ -34,10 +36,15 @@ function Home() {
         <div className='row'>
           <div className='col-md-12'>
             <br />
-            <h2 className='display-4 text-center website-title' id=''>
-              HippieTaoist Worm Farm
+            <h2
+              className='display-4 text-center website-title'
+              id='website-title'
+            >
+              <b>HippieTaoist Worm Farm</b>
             </h2>
           </div>
+
+          <NavBar />
 
           <div className='col-md-11'>
             <Link
