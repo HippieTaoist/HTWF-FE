@@ -29,7 +29,7 @@ import DeleteJokeMeme from './components/jokes-and-memes/Joke_Meme-Delete';
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className='App'>
         <Routes>
           <Route exact path='/' element={<Home />} />
 
