@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css';
+// import '../App.css';
+import '../styles/styles.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +9,17 @@ import NavBar from './NavBar';
 // Import posts from sections
 import BlogPost from './blog-post/BlogPost-Card';
 import JokeMeme from './jokes-and-memes/Joke_Meme-Card';
+
+import LogRocket from 'logrocket';
+LogRocket.init('hippietaoist/hippietaoist-worm-farm');
+
+LogRocket.identify('hippietaoist', {
+  name: 'Shawn Kittel',
+  email: 'shawn.m.kittel@gmail.com',
+
+  // Add your own custom user variables here, ie:
+  // subscriptionType: 'pro',
+});
 
 function Home() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -45,6 +57,14 @@ function Home() {
           </div>
 
           <NavBar />
+          <div className='container'>
+            <article>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+              ducimus praesentium explicabo ipsam asperiores vero nemo optio
+              nulla commodi dicta odio quae fugit vitae veritatis voluptas quia,
+              perspiciatis numquam maxime.
+            </article>
+          </div>
 
           <div className='col-md-11'>
             <Link
@@ -58,6 +78,7 @@ function Home() {
             <br />
           </div>
         </div>
+
         <div className='list'>{blogPostList}</div>
       </div>
     </div>
