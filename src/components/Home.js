@@ -46,7 +46,7 @@ function Home() {
     <div className='Home'>
       <div className='container'>
         <div className='row'>
-          <div className='col-md-12'>
+          {/* <div className='col-md-12'>
             <br />
             <h2
               className='display-4 text-center website-title'
@@ -54,7 +54,7 @@ function Home() {
             >
               <b>HippieTaoist Worm Farm</b>
             </h2>
-          </div>
+          </div> */}
 
           <NavBar />
           <div className='container'>
