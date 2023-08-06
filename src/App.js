@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import './App.css';
-import './styles/styles.css';
+// import './styles/styles.css';
 
 // Import Home from Component Folder
 import Home from './components/Home';
@@ -26,10 +26,13 @@ import ShowJokeMemeDetails from './components/jokes-and-memes/Joke_Meme-Details'
 import UpdateJokeMeme from './components/jokes-and-memes/Joke_Meme-Update';
 import DeleteJokeMeme from './components/jokes-and-memes/Joke_Meme-Delete';
 
+import NavBar from './components/NavBar';
+
 const App = () => {
   return (
     <Router>
       <div className='App'>
+        <NavBar />
         <Routes>
           <Route exact path='/' element={<Home />} />
 
