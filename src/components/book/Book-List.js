@@ -44,7 +44,7 @@ function ShowBookList() {
             <br />
           </div>
         </div>
-        <div className='list'>{blogPostList}</div>
+        <div className='list'>{bookList}</div>
       </div>
     </div>
   );
