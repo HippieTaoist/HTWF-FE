@@ -18,7 +18,7 @@ export default function Navbar() {
 
       <button
         className='hamburger'
-        onClick={() => {
+        onMouseEnter={() => {
           setIsNavExpanded(!isNavExpanded);
         }}
       >
@@ -42,7 +42,11 @@ export default function Navbar() {
           isNavExpanded ? 'navigation-menu expanded' : 'navigation-menu'
         }
       >
-        <ul>
+        <ul
+          onMouseLeave={() => {
+            setIsNavExpanded(!isNavExpanded);
+          }}
+        >
           <li>
             <a href='/books'>Books</a>
           </li>
