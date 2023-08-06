@@ -4,8 +4,6 @@ import '../styles/styles.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import NavBar from './NavBar';
-
 // Import posts from sections
 import BlogPost from './blog-post/BlogPost-Card';
 import JokeMeme from './jokes-and-memes/Joke_Meme-Card';
@@ -56,7 +54,6 @@ function Home() {
             </h2>
           </div> */}
 
-          <NavBar />
           <div className='container'>
             <article>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
