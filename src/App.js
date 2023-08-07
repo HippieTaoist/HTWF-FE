@@ -26,7 +26,7 @@ import ShowJokeMemeDetails from './components/jokes-and-memes/Joke_Meme-Details'
 import UpdateJokeMeme from './components/jokes-and-memes/Joke_Meme-Update';
 import DeleteJokeMeme from './components/jokes-and-memes/Joke_Meme-Delete';
 
-import NavBar from './components/NavBar';
+import NavBar from './components//navbar/NavBar';
 
 const App = () => {
   return (

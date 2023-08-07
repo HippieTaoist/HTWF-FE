@@ -1,6 +1,5 @@
+// import dependencies
 import React, { useState, useEffect } from 'react';
-// import '../App.css';
-import '../styles/styles.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -8,9 +7,11 @@ import { Link } from 'react-router-dom';
 import BlogPost from './blog-post/BlogPost-Card';
 import JokeMeme from './jokes-and-memes/Joke_Meme-Card';
 
+//import logRocket for errors.
 import LogRocket from 'logrocket';
+// LogRocket Initiation
 LogRocket.init('hippietaoist/hippietaoist-worm-farm');
-
+//LogRocket Identification
 LogRocket.identify('hippietaoist', {
   name: 'Shawn Kittel',
   email: 'shawn.m.kittel@gmail.com',
@@ -55,29 +56,31 @@ function Home() {
           </div> */}
 
           <div className='container'>
+            <br />
+            <h2> Welcome to the Farm!</h2>
             <article>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
-              ducimus praesentium explicabo ipsam asperiores vero nemo optio
-              nulla commodi dicta odio quae fugit vitae veritatis voluptas quia,
-              perspiciatis numquam maxime.
+              Here at the HippieTaoist worm farm we really strive to be part of
+              the solution and in doing so providing you with quality worms,
+              vermicast, customer service and information.
             </article>
-          </div>
-          <div>
-            <div className='col-md-11'>
-              <Link
-                to='/blog-post/create'
-                className='btn btn-outline-warning float-right'
-              >
-                + Add New Blog Post
-              </Link>
+            <br />
+            <div>
+              <div className='col-md-11'>
+                <Link
+                  to='/blog-post/create'
+                  className='btn btn-outline-warning float-right'
+                >
+                  + Add New Blog Post
+                </Link>
+              </div>
+              <br />
+              <br />
+              <br />
             </div>
-            <br />
-            <br />
-            <br />
           </div>
-        </div>
 
-        <div className='list'>{blogPostList}</div>
+          <div className='list'>{blogPostList}</div>
+        </div>
       </div>
     </div>
   );
