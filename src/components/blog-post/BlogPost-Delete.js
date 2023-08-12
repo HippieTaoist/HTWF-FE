@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../../App.css';
+// import '../../App.css';
 
 function DeleteBlogPost(props) {
   const [blogPost, setBlogPost] = useState({

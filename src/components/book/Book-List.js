@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Book from './Book-Card';
+
+// Import CSS from Book.css
+import './book.css';
 
 function ShowBookList() {
   const [books, setBooks] = useState([]);
@@ -25,27 +27,41 @@ function ShowBookList() {
 
   return (
     <div className='ShowBookList'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-12'>
-            <br />
-            <h2 className='display-4 text-center'>Books List</h2>
-          </div>
+      <div className='admin-bar'>
+        <div className='row-md'>
+          <Link
+            to='/create-book'
+            className='btn btn-outline-warning float-right'
+          >
+            + Add New Book
+          </Link>
+        </div>
+        <div className='row-md'>
+          <Link to='/edit-book' className='btn btn-outline-warning float-right'>
+            ~ Edit Existing Book
+          </Link>
+        </div>
+        <div className='row-md'>
+          <Link
+            to='/create-book'
+            className='btn btn-outline-warning float-right'
+          >
+            - Delete Book
+          </Link>
+        </div>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-12'>
+              <br />
+              <h2 className='display-4 text-center'>Books List</h2>
+            </div>
 
-          <div className='col-md-11'>
-            <Link
-              to='/create-blog-post'
-              className='btn btn-outline-warning float-right'
-            >
-              + Add New Book
-            </Link>
-            <br />
             <br />
             <br />
           </div>
         </div>
-        <div className='list'>{bookList}</div>
       </div>
+      <div className='list'>{bookList}</div>
     </div>
   );
 }

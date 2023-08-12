@@ -1,9 +1,8 @@
+// Import dependencies
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import './App.css';
-// import './styles/styles.css';
 
 // Import Home from Component Folder
-import Home from './components/Home';
+import Home from './components/home/Home';
 
 //Import from  BlogPost Component Folder
 import CreateBlogPost from './components/blog-post/BlogPost-Create';
@@ -17,6 +16,7 @@ import CreateBook from './components/book/Book-Create';
 import ShowBookList from './components/book/Book-List';
 import ShowBookDetails from './components/book/Book-Details';
 import UpdateBookInfo from './components/book/Book-Update';
+import ShowBlogPostToUpdateList from './components/blog-post/BlogPost-UpdateList';
 import DeleteBook from './components/book/Book-Delete';
 
 // Import From Joke Meme Component Folder
@@ -26,13 +26,16 @@ import ShowJokeMemeDetails from './components/jokes-and-memes/Joke_Meme-Details'
 import UpdateJokeMeme from './components/jokes-and-memes/Joke_Meme-Update';
 import DeleteJokeMeme from './components/jokes-and-memes/Joke_Meme-Delete';
 
+// Import NavBars from components folder
 import NavBar from './components//navbar/NavBar';
+import NavBarAdmin from './components/Admin/navbar-admin/NavBarAdmin';
 
 const App = () => {
   return (
     <Router>
       <div className='App'>
         <NavBar />
+        <NavBarAdmin />
         <Routes>
           <Route exact path='/' element={<Home />} />
 

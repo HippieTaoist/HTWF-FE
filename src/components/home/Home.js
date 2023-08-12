@@ -4,14 +4,15 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 // Import posts from sections
-import BlogPost from './blog-post/BlogPost-Card';
-import JokeMeme from './jokes-and-memes/Joke_Meme-Card';
+import BlogPost from '../blog-post/BlogPost-Card';
+import JokeMeme from '../jokes-and-memes/Joke_Meme-Card';
+import ShowBlogPostList from '../../functions/ShowBlogPostList';
 
 //import logRocket for errors.
 import LogRocket from 'logrocket';
 // LogRocket Initiation
 LogRocket.init('hippietaoist/hippietaoist-worm-farm');
-//LogRocket Identification
+//LogRocket Identificatio n
 LogRocket.identify('hippietaoist', {
   name: 'Shawn Kittel',
   email: 'shawn.m.kittel@gmail.com',
@@ -21,25 +22,28 @@ LogRocket.identify('hippietaoist', {
 });
 
 function Home() {
-  const [blogPosts, setBlogPosts] = useState([]);
+  // const [blogPosts, setBlogPosts] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get('http://localhost:3001/api/blogposts')
-      .then((res) => {
-        setBlogPosts(res.data);
-      })
-      .catch((err) => {
-        console.log('Error from Home');
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get('http://localhost:3001/api/blogposts')
+  //     .then((res) => {
+  //       setBlogPosts(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log('Error from Home');
+  //     });
+  // }, []);
 
-  const blogPostList =
-    blogPosts.length === 0
-      ? 'there is not a blog post record!'
-      : blogPosts.map((blogPost, k) => (
-          <BlogPost blogPost={blogPost} key={k} />
-        ));
+  // const blogPostList =
+  //   blogPosts.length === 0
+  //     ? 'there is not a blog post record!'
+  //     : blogPosts.map((blogPost, k) => (
+  //         <div>
+  //           <BlogPost blogPost={blogPost} key={k} />
+  //           <div>{k}</div>
+  //         </div>
+  //       ));
 
   return (
     <div className='Home'>
@@ -57,6 +61,7 @@ function Home() {
 
           <div className='container'>
             <br />
+            <div> {ShowBlogPostList()} blogpost list</div>
             <h2> Welcome to the Farm!</h2>
             <article>
               Here at the HippieTaoist worm farm we really strive to be part of
@@ -64,22 +69,9 @@ function Home() {
               vermicast, customer service and information.
             </article>
             <br />
-            <div>
-              <div className='col-md-11'>
-                <Link
-                  to='/blog-post/create'
-                  className='btn btn-outline-warning float-right'
-                >
-                  + Add New Blog Post
-                </Link>
-              </div>
-              <br />
-              <br />
-              <br />
-            </div>
           </div>
 
-          <div className='list'>{blogPostList}</div>
+          <div className='list'>{ShowBlogPostList()}</div>
         </div>
       </div>
     </div>

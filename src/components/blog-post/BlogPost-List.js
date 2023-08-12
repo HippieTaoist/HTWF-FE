@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../App.css';
+// import '../../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BlogPost from './BlogPost-Card';
@@ -39,7 +39,7 @@ function ShowBlogPostList() {
               to='/create-blog-post'
               className='btn btn-outline-warning float-right'
             >
-              + Add New Book
+              + Add New Booksdlmsdflsdmflksdflsdlfsdkflkm
             </Link>
             <br />
             <br />

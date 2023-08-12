@@ -19,13 +19,16 @@
 
 .navigation-menu {
     margin-left: auto;
-
+    display: flex;
+    align-items: center;
 }
+
 
 .navigation-menu ul {
     display: flex;
     padding: 0;
     height: 50%;
+    margin: auto;
 }
 
 .navigation-menu li {
@@ -37,7 +40,7 @@
 
 .navigation-menu li a {
     /* increase the surface area of the anchor to span more than just the anchor text */
-    text-decoration: none;
+    /* text-decoration: none; */
     display: block;
     width: 100%;
     color: white;
@@ -69,6 +72,7 @@
     }
 
 
+
     .navigation-menu ul {
         /* navigation menu is positioned to start 60px from top of the document (which is directly below the navbar) */
         position: absolute;
@@ -76,14 +80,14 @@
         right: 0;
         /* stacks the li tags vertically */
         flex-direction: column;
-        /* makes menu span full height and width stablewidth: 100%*/
-        ;
+        /* makes menu span full height and width stablewidth: 100% */
         height: auto;
-        /*calc(100vh - 77px);*/
+        /* calc (100vh - 77px); */
         background-color: white;
-        border-top: 1px solid black;
+        border: 1px solid black;
         display: none;
     }
+
 
     .navigation-menu.expanded ul {
         display: block;
@@ -100,8 +104,17 @@
     }
 }
 
-.navigation-menu li:hover {
+.navigation-menu li a:hover {
+    border-radius: 10px;
     background-color: #eee;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    ;
+}
+
+.navigation-menu li a:hover {
+    color: #007bff;
 }
 
 /* credit from https://blog.logrocket.com/create-responsive-navbar-react-css/ */

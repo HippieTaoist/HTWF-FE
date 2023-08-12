@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../../App.css';
+// import '../../App.css';
 
 function UpdateBlogPost(props) {
   const [blogPost, setBlogPost] = useState({
