@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Import Home from Component Folder
 import Home from './components/home/Home';
 
+// Import Home from Component Folder
+import CreateUser from './components/users/User-Create';
+
 //Import from  BlogPost Component Folder
 import CreateBlogPost from './components/blog-post/BlogPost-Create';
 import ShowBlogPostList from './components/blog-post/BlogPost-List';
@@ -38,6 +41,9 @@ const App = () => {
         <NavBarAdmin />
         <Routes>
           <Route exact path='/' element={<Home />} />
+
+          {/* <Route exact path='/users' element={<ShowUserList />} /> */}
+          <Route path='/user/create' element={<CreateUser />} />
 
           {/* Blog Post Routes */}
           <Route exact path='/blog-posts' element={<ShowBlogPostList />} />
