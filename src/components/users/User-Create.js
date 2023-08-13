@@ -14,8 +14,8 @@ const CreateUser = (props) => {
     username: '',
     email: '',
     password: '',
-    userLevel: '',
-    adminLevel: '',
+    userLevel: 'basic',
+    adminLevel: 0,
   });
 
   const onChange = (e) => {
@@ -26,7 +26,7 @@ const CreateUser = (props) => {
     e.preventDefault();
 
     axios
-      .post('http://localhost:3001/api/blogposts', user)
+      .post('http://localhost:3001/api/users/user-create', user)
       .then((res) => {
         setUser({
           nameFirst: '',
@@ -34,8 +34,8 @@ const CreateUser = (props) => {
           username: '',
           email: '',
           password: '',
-          userLevel: '',
-          adminLevel: '',
+          userLevel: 'basic',
+          adminLevel: '0',
         });
 
         // Push to /
@@ -76,9 +76,10 @@ const CreateUser = (props) => {
                 <input
                   type='text'
                   placeholder='Last Name Here'
-                  name='title'
+                  id='nameLast'
+                  name='nameLast'
                   className='form-control'
-                  value={user.lastName}
+                  value={user.nameLast}
                   onChange={onChange}
                 />
               </div>
@@ -97,7 +98,7 @@ const CreateUser = (props) => {
 
               <div className='form-group'>
                 <input
-                  type='text'
+                  type='email'
                   placeholder='Email Here'
                   name='email'
                   className='form-control'
