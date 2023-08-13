@@ -117,10 +117,7 @@ const CreateUser = (props) => {
                 />
               </div>
 
-              <input
-                type='submit'
-                className='btn btn-outline-warning btn-block mt-4'
-              />
+              <input type='submit' className='' />
             </form>
           </div>
         </div>
