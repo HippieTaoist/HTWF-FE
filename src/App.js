@@ -6,6 +6,7 @@ import Home from './components/home/Home';
 
 // Import Home from Component Folder
 import CreateUser from './components/users/User-Create';
+import ShowUserDetails from './components/users/User-Details';
 
 //Import from  BlogPost Component Folder
 import CreateBlogPost from './components/blog-post/BlogPost-Create';
@@ -19,7 +20,6 @@ import CreateBook from './components/book/Book-Create';
 import ShowBookList from './components/book/Book-List';
 import ShowBookDetails from './components/book/Book-Details';
 import UpdateBookInfo from './components/book/Book-Update';
-import ShowBlogPostToUpdateList from './components/blog-post/BlogPost-UpdateList';
 import DeleteBook from './components/book/Book-Delete';
 
 // Import From Joke Meme Component Folder
@@ -44,11 +44,15 @@ const App = () => {
 
           {/* <Route exact path='/users' element={<ShowUserList />} /> */}
           <Route path='/user/create' element={<CreateUser />} />
+          <Route path='/user/show/:id' element={<ShowUserDetails />} />
 
           {/* Blog Post Routes */}
           <Route exact path='/blog-posts' element={<ShowBlogPostList />} />
           <Route path='/blog-post/create' element={<CreateBlogPost />} />
-          <Route path='/blog-post/show/:id' element={<ShowBlogPostDetails />} />
+          <Route
+            path='/blog-post/show/:username'
+            element={<ShowBlogPostDetails />}
+          />
           <Route path='/blog-post/update/:id' element={<UpdateBlogPost />} />
           <Route path='/blog-post/delete/:id' element={<DeleteBlogPost />} />
 
