@@ -1,5 +1,6 @@
 // Import dependencies
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 // Import Home from Component Folder
 import Home from './components/home/Home';
@@ -34,46 +35,55 @@ import DeleteJokeMeme from './components/jokes-and-memes/Joke_Meme-Delete';
 import NavBar from './components//navbar/NavBar';
 import NavBarAdmin from './components/Admin/navbar-admin/NavBarAdmin';
 
+import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
   return (
-    <Router>
-      <div className='App'>
-        <NavBar />
-        <NavBarAdmin />
-        <Routes>
-          <Route exact path='/' element={<Home />} />
+    <>
+      <ToastContainer />
+      <Router>
+        <div className='App'>
+          <NavBar />
+          <NavBarAdmin />
+          <Routes>
+            <Route exact path='/' element={<Home />} />
 
-          {/* User Routes*/}
-          <Route exact path='/user/signup' element={<SignUp />} />
-          <Route path='/user/create' element={<CreateUser />} />
-          <Route path='/user/show/:id' element={<ShowUserDetails />} />
+            {/* User Routes*/}
+            <Route exact path='/user/sign-up' element={<SignUp />} />
+            <Route path='/user/create' element={<CreateUser />} />
+            <Route path='/user/show/:id' element={<ShowUserDetails />} />
 
-          {/* Blog Post Routes */}
-          <Route exact path='/blog-posts' element={<ShowBlogPostList />} />
-          <Route path='/blog-post/create' element={<CreateBlogPost />} />
-          <Route
-            path='/blog-post/show/:username'
-            element={<ShowBlogPostDetails />}
-          />
-          <Route path='/blog-post/update/:id' element={<UpdateBlogPost />} />
-          <Route path='/blog-post/delete/:id' element={<DeleteBlogPost />} />
+            {/* Blog Post Routes */}
+            <Route exact path='/blog-posts' element={<ShowBlogPostList />} />
+            <Route path='/blog-post/create' element={<CreateBlogPost />} />
+            <Route
+              path='/blog-post/show/:username'
+              element={<ShowBlogPostDetails />}
+            />
+            <Route path='/blog-post/update/:id' element={<UpdateBlogPost />} />
+            <Route path='/blog-post/delete/:id' element={<DeleteBlogPost />} />
 
-          {/* Book Route */}
-          <Route exact path='/books' element={<ShowBookList />} />
-          <Route path='/book/create/:id' element={<CreateBook />} />
-          <Route path='/book/show/:id' element={<ShowBookDetails />} />
-          <Route path='/book/update/:id' element={<UpdateBookInfo />} />
-          <Route path='/book/delete/:id' element={<DeleteBook />} />
+            {/* Book Route */}
+            <Route exact path='/books' element={<ShowBookList />} />
+            <Route path='/book/create/:id' element={<CreateBook />} />
+            <Route path='/book/show/:id' element={<ShowBookDetails />} />
+            <Route path='/book/update/:id' element={<UpdateBookInfo />} />
+            <Route path='/book/delete/:id' element={<DeleteBook />} />
 
-          {/* Joke Meme Route */}
-          <Route exact path='/joke-memes' element={<ShowJokeMemeList />} />
-          <Route path='/joke-meme/create/:id' element={<CreateJokeMeme />} />
-          <Route path='/joke-meme/show/:id' element={<ShowJokeMemeDetails />} />
-          <Route path='/joke-meme/update/:id' element={<UpdateJokeMeme />} />
-          <Route path='/joke-meme/delete/:id' element={<DeleteJokeMeme />} />
-        </Routes>
-      </div>
-    </Router>
+            {/* Joke Meme Route */}
+            <Route exact path='/joke-memes' element={<ShowJokeMemeList />} />
+            <Route path='/joke-meme/create/:id' element={<CreateJokeMeme />} />
+            <Route
+              path='/joke-meme/show/:id'
+              element={<ShowJokeMemeDetails />}
+            />
+            <Route path='/joke-meme/update/:id' element={<UpdateJokeMeme />} />
+            <Route path='/joke-meme/delete/:id' element={<DeleteJokeMeme />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 };
 

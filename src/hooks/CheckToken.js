@@ -2,15 +2,15 @@ import jwtDecode from 'jwt-decode';
 
 export default function CheckToken() {
   function checkJwtToken() {
-    let jwtToken = window.localStorage.getItem('jetToken');
+    let jwtToken = window.localStorage.getItem('jwtToken');
 
-    if (jetToken) {
-      let decodedToken = jetDecode(jwtToken);
+    if (jwtToken) {
+      let decodedToken = jwtDecode(jwtToken);
 
       const currentTime = Date.now() / 1000;
 
       if (decodedToken.exp < currentTime) {
-        window.localStorage.getItem('jetToken');
+        window.localStorage.getItem('jwtToken');
         return false;
       } else {
         return true;
@@ -18,7 +18,6 @@ export default function CheckToken() {
     } else {
       return false;
     }
-
-    return { checkJwtToken };
   }
+  return { checkJwtToken };
 }

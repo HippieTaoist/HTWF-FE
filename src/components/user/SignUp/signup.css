@@ -1,0 +1,14 @@
+.SignUp-form-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px
+}
+
+.SignUp-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    text-align: center;
+}

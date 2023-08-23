@@ -16,19 +16,46 @@ import AxiosBackend from '../../../utils/axios/AxiosBackend';
 import './signup.css';
 
 export default function SignUp() {
-  const [nameFirst, setFirstNameOnFocus, setFirstNameOnBlur, firstNameError] =
-    ValidateFirstName();
+  const [
+    nameFirst,
+    setFirstNameOnFocus,
+    setFirstNameOnBlur,
+    handleFirstNameOnChange,
+    firstNameError,
+  ] = ValidateFirstName();
 
-  const [nameLast, setLastNameOnFocus, setLastNameOnBlur, lastNameError] =
-    ValidateLastName();
+  const [
+    nameLast,
+    setLastNameOnFocus,
+    setLastNameOnBlur,
+    handleLastNameOnChange,
+    lastNameError,
+  ] = ValidateLastName();
 
-  const [email, setEmailOnFocus, setEmailOnBlur, emailError] = ValidateEmail();
+  const [
+    email,
+    setEmailOnFocus,
+    setEmailOnBlur,
+    handleEmailOnChange,
+    emailError,
+  ] = ValidateEmail();
 
-  const [username, setUsernameOnFocus, setUsernameOnBlur, usernameError] =
-    ValidateUsername();
+  const [
+    username,
+    setUsernameOnFocus,
+    setUsernameOnBlur,
+    handleUsernameOnChange,
+    usernameError,
+  ] = ValidateUsername();
 
-  const [password, setPasswordOnFocus, setPasswordOnBlur, passwordError] =
-    ValidatePassword();
+  const [
+    password,
+    setPasswordOnFocus,
+    setPasswordOnBlur,
+    handlePasswordOnChange,
+    passwordError,
+  ] = ValidatePassword();
+  ValidatePassword();
 
   const navigate = useNavigate();
 
@@ -40,7 +67,7 @@ export default function SignUp() {
     e.preventDefault();
 
     try {
-      payload = await AxiosBackend.post('/api/users.user-create', {
+      let payload = await AxiosBackend.post('/api/users/user-create', {
         userLevel,
         nameFirst,
         nameLast,
@@ -98,7 +125,7 @@ export default function SignUp() {
               placeholder='First Name'
               onFocus={setFirstNameOnFocus}
               onBlur={setFirstNameOnBlur}
-              onChange={handleFistNameOnChange}
+              onChange={handleFirstNameOnChange}
               required
             />
           </label>

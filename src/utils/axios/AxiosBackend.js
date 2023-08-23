@@ -13,3 +13,5 @@ const AxiosBackend = axios.create({
     authorization: `Bearer ${window.localStorage.getItem('jwtToken')}`,
   },
 });
+
+export default AxiosBackend;
