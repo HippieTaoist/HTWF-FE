@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 
 // Hooks
-import ValidateFistName from '../../../hooks/ValidateFirstName';
+import ValidateFirstName from '../../../hooks/ValidateFirstName';
 import ValidateLastName from '../../../hooks/ValidateLastName';
 import ValidateEmail from '../../../hooks/ValidateEmail';
 import ValidateUsername from '../../../hooks/ValidateUsername';
@@ -96,7 +96,7 @@ export default function SignUp() {
               type='text'
               className='SignUp-input'
               placeholder='First Name'
-              onFocus={setFIrstNameOnFocus}
+              onFocus={setFirstNameOnFocus}
               onBlur={setFirstNameOnBlur}
               onChange={handleFistNameOnChange}
               required

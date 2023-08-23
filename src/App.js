@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // Import Home from Component Folder
 import Home from './components/home/Home';
 
-// Import Home from Component Folder
-import CreateUser from './components/users/User-Create';
-import ShowUserDetails from './components/users/User-Details';
+// Import from User Component Folder
+import CreateUser from './components/user/User-Create';
+import SignUp from './components/user/SignUp/SignUp';
+import ShowUserDetails from './components/user/User-Details';
 
 //Import from  BlogPost Component Folder
 import CreateBlogPost from './components/blog-post/BlogPost-Create';
@@ -42,7 +43,8 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />} />
 
-          {/* <Route exact path='/users' element={<ShowUserList />} /> */}
+          {/* User Routes*/}
+          <Route exact path='/user/signup' element={<SignUp />} />
           <Route path='/user/create' element={<CreateUser />} />
           <Route path='/user/show/:id' element={<ShowUserDetails />} />
 
