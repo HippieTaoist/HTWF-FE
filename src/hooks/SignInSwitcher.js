@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { isAlphanumeric, isEmail } from 'validator';
 
 export default function SignInSwitcher() {
-  const [signIn, setSIgnIn] = useState('');
+  const [signIn, setSignIn] = useState('');
   const [error, setError] = useState('');
   const [onBlur, setOnBlur] = useState(false);
 
