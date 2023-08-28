@@ -37,6 +37,7 @@ import NavBarAdmin from './components/Admin/navbar-admin/NavBarAdmin';
 
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
+import SignIn from './components/user/SignIn/SignIn';
 
 const App = () => {
   return (
@@ -50,6 +51,8 @@ const App = () => {
             <Route exact path='/' element={<Home />} />
 
             {/* User Routes*/}
+            <Route exact path='/user/sign-in' element={<SignIn />} />
+
             <Route exact path='/user/sign-up' element={<SignUp />} />
             <Route path='/user/create' element={<CreateUser />} />
             <Route path='/user/show/:id' element={<ShowUserDetails />} />

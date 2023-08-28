@@ -17,7 +17,7 @@ export default function ValidateEmail() {
     }
     if (onBlur) {
       if (email.length === 0) {
-        Error['email must not be empty'];
+        Error('email must not be )empty');
       }
     }
   }, [email, onFocus, onBlur]);

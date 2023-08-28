@@ -13,7 +13,7 @@ import CheckToken from '../../../hooks/CheckToken';
 //Utilities
 import AxiosBackend from '../../../utils/axios/AxiosBackend';
 
-import './signup.css';
+import './sign-up.css';
 
 export default function SignUp() {
   const [
