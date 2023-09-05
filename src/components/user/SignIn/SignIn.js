@@ -49,8 +49,8 @@ export default function SignIn() {
     // setSignInPassword(password);
 
     // console.log('pass:', signInPassword, password);
-    // e.prevent.default();
-
+    console.log('im in handleSIgnInSubmit');
+    // e.preventDefault();
     try {
       let payload = await axios.post(
         'http://localhost:3001/api/users/user-login',
