@@ -1,7 +1,9 @@
 // Lesson from https://blog.logrocket.com/create-responsive-navbar-react-css/
 
 // bring in t useState
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+
+import { AuthContext } from '../../context/AuthContext';
 
 //bring in navbar styling
 import './navbar.css';
@@ -9,6 +11,12 @@ import './navbar.css';
 export default function Navbar() {
   // set useState variables
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+
+  const {
+    dispatch,
+    state: { user },
+  } = useContext(AuthContext);
+  console.log('userinfo', user);
 
   return (
     <nav className='navigation'>

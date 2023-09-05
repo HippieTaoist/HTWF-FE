@@ -3,21 +3,7 @@ import React, { useReducer, createContext } from 'react';
 export const AuthContext = createContext({});
 
 const initialState = {
-  user: {
-    isAuth: true,
-    email: '',
-    username: '',
-    profile: {
-      email: '',
-      username: '',
-      _id: '',
-      nameFirst: '',
-      nameLast: '',
-      createdDate: '',
-      updatedLast: '',
-      userLevel: '',
-    },
-  },
+  user: null,
 };
 // const initialState = {
 //   user: {

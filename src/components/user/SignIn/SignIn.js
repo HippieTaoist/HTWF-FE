@@ -19,7 +19,8 @@ import './sign-in.css';
 export default function SignIn() {
   // Variables
   //Sign In Password
-  const [signInPassword, setSignInPassword] = useState('');
+  // const [password, setSignInPassword] = useState('');
+  const [passVal, setPassVal] = useState('');
   //set navigate to use useNavigate function
   const navigate = useNavigate();
   //use dispatch to set user state with AuthContext tracking through site.
@@ -31,22 +32,31 @@ export default function SignIn() {
   const [signIn, setSignInOnBlur, signInHandleOnChange, signInError] =
     SignInSwitcher();
   // password variables for password input area
-  const [password, passwordSetOnBlur, passwordHandleOnChange, passwordError] =
-    ValidatePassword();
+  const [
+    password,
+    passwordSetOnFocus,
+    passwordSetOnBlur,
+    passwordHandleOnChange,
+    passwordError,
+  ] = ValidatePassword();
+  console.log('signIn', signIn);
+  console.log('password', password);
+  console.log('passVal: ' + passVal);
+  // console.log('38', password);
 
   // Functions
   async function handleSignInSubmit(e) {
-    e.prevent.default();
+    // setSignInPassword(password);
 
-    console.log('36', signIn);
-    console.log('37', signInPassword);
+    // console.log('pass:', signInPassword, password);
+    // e.prevent.default();
 
     try {
       let payload = await axios.post(
-        'http://localhost:3001/api/users/user-Login',
+        'http://localhost:3001/api/users/user-login',
         {
           signIn,
-          signInPassword,
+          password,
         },
         {
           headers: {
@@ -55,13 +65,13 @@ export default function SignIn() {
           },
         }
       );
-      console.log(payload);
+      console.log('payload', payload);
 
       window.localStorage.setItem('jwtToken', payload.data.payload);
 
       let decodedToken = jwtDecode(payload.data.payload);
 
-      console.log(decodedToken);
+      console.log('decoded token: ', decodedToken);
 
       dispatch({
         type: 'LOGIN',
@@ -78,19 +88,22 @@ export default function SignIn() {
       toast.success(`You are now logged in ${decodedToken.username}`);
       navigate('/');
     } catch (err) {
-      console.log(err);
-      console.log(err.message);
+      console.log('err: ', err);
+      console.log('err message: ', err.message);
     }
   }
   if (signInError || passwordError) {
-    console.log(signInError || passwordError);
+    console.log('Error: ', signInError || passwordError);
+    signInError
+      ? console.log('signInError: ', signIn)
+      : console.log('passwordError: ', password);
   }
 
   return (
     <div className='SignIn'>
       {user && navigate('/')}
       <h1 className='SignIn-page-title'>Sign In</h1>
-      <div className='SIgnIn-form-container'>
+      <div className='SignIn-form-container'>
         <form className='SignIn-form' onSubmit={handleSignInSubmit}>
           <input
             type='text'
@@ -108,9 +121,12 @@ export default function SignIn() {
             className='SignIn-password'
             placeholder='Password Here'
             onBlur={passwordSetOnBlur}
-            onChange={(e) => setSignInPassword(e.target.value)}
+            onFocus={passwordSetOnFocus}
+            onChange={passwordHandleOnChange}
           />
-          <button className='SignIn-button-submit'>Login</button>
+          <button type='submit' className='SignIn-button-submit'>
+            Login
+          </button>
         </form>
       </div>
       Sign In Page

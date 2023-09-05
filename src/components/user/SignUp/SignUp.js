@@ -68,19 +68,19 @@ export default function SignUp() {
 
     try {
       let payload = await AxiosBackend.post('/api/users/user-create', {
-        userLevel,
         nameFirst,
         nameLast,
         username,
         email,
         password,
+        userLevel,
       });
       console.log('payload', payload);
 
       toast.success(
         "Congrats, You're All Signed Up!\n Click This Notifications To Sign In",
         {
-          onClick: () => navigate('/sign-in'),
+          onClick: () => navigate('/user/sign-in'),
         }
       );
     } catch (err) {
@@ -178,7 +178,11 @@ export default function SignUp() {
             />
           </label>
           <br />
-          <button type='submit' className='SignUp-Button'>
+          <button
+            type='submit'
+            // onClick={() => navigate('/sign-in')}
+            className='SignUp-Button'
+          >
             Submit Info
           </button>
         </form>

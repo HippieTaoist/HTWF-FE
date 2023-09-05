@@ -7,13 +7,11 @@ export default function SignInSwitcher() {
   const [onBlur, setOnBlur] = useState(false);
 
   useEffect(() => {
-    {
-      if (onBlur) {
-        if (signIn.length === 0) {
-          setError('Sign In must not be empty, please use email or username');
-        } else {
-          setError('');
-        }
+    if (onBlur) {
+      if (signIn.length === 0) {
+        setError('Sign In must not be empty, please use email or username');
+      } else {
+        setError('');
       }
     }
   }, [signIn, onBlur]);
