@@ -20,7 +20,6 @@ export default function SignIn() {
   // Variables
   //Sign In Password
   // const [password, setSignInPassword] = useState('');
-  const [passVal, setPassVal] = useState('');
   //set navigate to use useNavigate function
   const navigate = useNavigate();
   //use dispatch to set user state with AuthContext tracking through site.
@@ -41,7 +40,6 @@ export default function SignIn() {
   ] = ValidatePassword();
   console.log('signIn', signIn);
   console.log('password', password);
-  console.log('passVal: ' + passVal);
   // console.log('38', password);
 
   // Functions
@@ -50,7 +48,7 @@ export default function SignIn() {
 
     // console.log('pass:', signInPassword, password);
     console.log('im in handleSIgnInSubmit');
-    // e.preventDefault();
+    e.preventDefault();
     try {
       let payload = await axios.post(
         'http://localhost:3001/api/users/user-login',
