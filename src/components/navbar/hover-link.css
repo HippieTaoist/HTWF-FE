@@ -1,0 +1,19 @@
+body {
+    cursor: none; /* Hide the default cursor */
+}
+
+.hover-link {
+    position: relative;
+    z-index: 1; /* Ensure the link is above the cursor */
+}
+
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with link clicks */
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+}

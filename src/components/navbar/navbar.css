@@ -3,11 +3,13 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     padding: 0.5rem 0rem;
-    background-color: #007bff;
+    background-color: brown;
     color: black;
     box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+    border-bottom: black 2px solid;
 }
 
 .brand-name {
@@ -44,6 +46,22 @@
     display: block;
     width: 100%;
     color: white;
+    text-decoration: none;
+}
+
+.navigation-menu button{
+    background-color:red;
+    position: relative;
+
+}
+
+.navbar-menu-link-description{
+    display: none;
+    position:absolute;
+}
+
+.navbar-menu-link-description:hover{
+    display: block;
 }
 
 .hamburger {
@@ -64,46 +82,46 @@
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+.hamburger-menu  {
+    display: none;
+}
 
-    /* Rules go here */
+@media screen and (max-width: 1000px) {
     .hamburger {
         display: block;
     }
-
-
-
-    .navigation-menu ul {
+    .navigation-menu{
+        display: none;
+    }
+    .hamburger-menu  {
+        list-style-type: none;
         /* navigation menu is positioned to start 60px from top of the document (which is directly below the navbar) */
         position: absolute;
         top: 60px;
         right: 0;
         /* stacks the li tags vertically */
         flex-direction: column;
-        /* makes menu span full height and width stablewidth: 100% */
+
+        /* makes menu span full height and width stable width: 100% */
         height: auto;
         /* calc (100vh - 77px); */
-        background-color: white;
-        border: 1px solid black;
+        background-color: transparent;
+        /* border: 1px solid black; */
         display: none;
     }
-
-
-    .navigation-menu.expanded ul {
+    .hamburger-menu.expanded  {
         display: block;
     }
-
     .navigation-menu.expanded li a {
         color: #007bff;
     }
-
     .navigation-menu li {
         /* centers link text and strips off margin */
         text-align: center;
         margin: 0;
     }
 }
-
+/*
 .navigation-menu li a:hover {
     border-radius: 10px;
     background-color: #eee;
@@ -111,10 +129,31 @@
     padding-right: 2px;
 
     ;
-}
+} */
 
 .navigation-menu li a:hover {
     color: #007bff;
 }
 
 /* credit from https://blog.logrocket.com/create-responsive-navbar-react-css/ */
+
+body {
+    /* cursor: none; Hide the default cursor */
+}
+
+.hover-link {
+    position: relative;
+    z-index: 1; /* Ensure the link is above the cursor */
+}
+
+.custom-cursor {
+    width: max-content;
+    height: 20px;
+    /* border-radius: 50%; */
+    background-color: green;
+    position: absolute;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with link clicks */
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+
+}

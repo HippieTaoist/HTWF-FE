@@ -1,0 +1,32 @@
+.book-store{
+    border: red 3px solid ;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bookshelf{
+    border: greenyellow 1px solid ;
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: space-evenly;
+}
+
+
+.book-cover {
+    width: 144px; /* (6 inches / 3) * 72 pixels/inch */
+    height: 216px; /* (9 inches / 3) * 72 pixels/inch */
+    background-color: #fff; /* Set your desired background color */
+    border: 1px solid #000; /* Add a border if needed */
+    margin-bottom: 20px;
+  }
+
+.book-details{
+      display: none;
+  }
+
+.book-card{
+    /* border: 1px solid #000; */
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import '../../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import BlogPost from '../components/blog-post/BlogPost-Card';
+import BlogPost from '../routes/blog-post/BlogPost-Card';
 
 function ShowBlogPostList() {
   console.log('ShowBlogPostList Function File');

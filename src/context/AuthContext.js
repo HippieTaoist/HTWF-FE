@@ -20,16 +20,12 @@ function reducer(state, action) {
           isAuth: true,
           email: action.email,
           username: action.username,
-          profile: {
-            email: action.email,
-            username: action.username,
-            _id: action._id,
-            nameFirst: action.nameFirst,
-            nameLast: action.nameLast,
-            createdDate: action.createdDate,
-            updatedLast: action.updatedLast,
-            userLevel: action.userLevel,
-          },
+          _id: action._id,
+          nameFirst: action.nameFirst,
+          nameLast: action.nameLast,
+          createdDate: action.createdDate,
+          updatedLast: action.updatedLast,
+          userLevel: action.userLevel,
         },
       };
     case 'LOGOUT':

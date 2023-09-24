@@ -4,22 +4,22 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 // Import posts from sections
-import BlogPost from '../blog-post/BlogPost-Card';
-import JokeMeme from '../jokes-and-memes/Joke_Meme-Card';
+import BlogPost from '../../routes/blog-post/BlogPost-Card';
+import JokeMeme from '../../routes/jokes-and-memes/Joke_Meme-Card';
 import ShowBlogPostList from '../../functions/ShowBlogPostList';
 
-//import logRocket for errors.
-import LogRocket from 'logrocket';
-// LogRocket Initiation
-LogRocket.init('hippietaoist/hippietaoist-worm-farm');
-//LogRocket Identificatio n
-LogRocket.identify('hippietaoist', {
-  name: 'Shawn Kittel',
-  email: 'shawn.m.kittel@gmail.com',
+// //import logRocket for errors.
+// import LogRocket from 'logrocket';
+// // LogRocket Initiation
+// LogRocket.init('hippietaoist/hippietaoist-worm-farm');
+// //LogRocket Identificatio n
+// LogRocket.identify('hippietaoist', {
+//   name: 'Shawn Kittel',
+//   email: 'shawn.m.kittel@gmail.com',
 
-  // Add your own custom user variables here, ie:
-  // subscriptionType: 'pro',
-});
+//   // Add your own custom user variables here, ie:
+//   // subscriptionType: 'pro',
+// });
 
 function Home() {
   // const [blogPosts, setBlogPosts] = useState([]);
@@ -61,7 +61,6 @@ function Home() {
 
           <div className='container'>
             <br />
-            <div> {ShowBlogPostList()} blogpost list</div>
             <h2> Welcome to the Farm!</h2>
             <article>
               Here at the HippieTaoist worm farm we really strive to be part of
@@ -70,8 +69,6 @@ function Home() {
             </article>
             <br />
           </div>
-
-          <div className='list'>{ShowBlogPostList()}</div>
         </div>
       </div>
     </div>
