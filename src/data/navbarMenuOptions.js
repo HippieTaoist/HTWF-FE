@@ -12,7 +12,7 @@ export const navbarMenuOptions = [
 
     {
         title: 'Blog',
-        link: 'blog',
+        link: 'blog-posts',
         desc: 'I guess i\'ll blog about worms!'
     },
     {

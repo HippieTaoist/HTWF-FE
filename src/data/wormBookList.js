@@ -1,11 +1,11 @@
 export const wormBookList = [
   //   {
-    //   productType:'book',
+  //   productType:'book',
   //     title: 'BookTitle',
   //     imgLink: 'BookCoverLink',
   //     price: 'Click To Discover',
   //     author: ['Author',],
-  // category: ['Category',],
+  // categories: ['Category',],
   //     buyLink: [
   //       {
   //         marketPlace: 'Marketplace',
@@ -15,14 +15,14 @@ export const wormBookList = [
   //     description: `Description`,
   //   },
   {
-    productType:'book',
+    productType: 'book',
 
     title:
       'The Worm Farmer’s Handbook: Mid- to Large-Scale Vermicomposting for Farms, Businesses, Municipalities, Schools, and Institutions',
     imgLink: 'https://m.media-amazon.com/images/I/71ZOa+D7GYL._SY425_.jpg',
     price: 'Click To Discover',
     author: ['Rhonda Sherman'],
-    category: ['Category'],
+    categories: ['Business', 'Compost'],
     buyLink: [
       {
         marketPlace: 'Amazon',
@@ -54,7 +54,7 @@ export const wormBookList = [
     From livestock farms and restaurants to colleges, military bases, and prisons, Sherman details why and how commercial-scale vermicomposting is a fast-growing, sustainable solution for organic waste management. The Worm Farmer’s Handbook is the first and only authoritative how-to guide that goes beyond small-scale operations and demystifies the science and logistics of the fascinating process that is vermicomposting.`,
   },
   {
-    productType:'book',
+    productType: 'book',
 
     title:
       'Worms Eat My Garbage, 35th Anniversary Edition: How to Set Up and Maintain a Worm Composting System: Compost Food Waste, Produce Fertilizer for Houseplants and Garden, and Educate Your Kids and Family',
@@ -68,12 +68,12 @@ export const wormBookList = [
       },
     ],
     author: [' Mary Appelhof', 'Joanne Olszewski', 'Amy Stewart'],
-    category: ['Business', 'Compost'],
+    categories: ['Business', 'Compost'],
     description:
       'For more than three decades, this best-selling guide to the practice of vermicomposting has taught people how to use worms to recycle food waste into nutrient-rich fertilizer for houseplants or gardens. Small-scale, self-contained worm bins can be kept indoors, in a basement, or even under the kitchen sink in an apartment — making vermicomposting a great option for city dwellers and anyone who doesn’t want or can’t have an outdoor compost pile. The fully revised 35th anniversary edition features the original’s same friendly tone, with up-to-date information on the entire process, from building or purchasing a bin (readily available at garden supply stores) to maintaining the worms and harvesting the finished compost.',
   },
   {
-    productType:'book',
+    productType: 'book',
 
     title: 'How To Start A Worm Bin',
     imgLink: 'https://m.media-amazon.com/images/I/51wM2AvLy0L._SY342_.jpg',
@@ -86,7 +86,7 @@ export const wormBookList = [
       },
     ],
     author: 'Henry Owen ',
-    category: ['Business'],
+    categories: ['Business'],
     description: `Do you want to learn to turn food scraps into valuable compost? Do you believe in taking responsibility for the waste we create? People all over the world are turning their food scraps into nutrient-rich worm compost through starting their own worm bin. This book contains everything you need to get started worm composting in one easy-to-read book. You will learn:
     What type of composting worms to buy
     How to construct a bin, maintain the right environment, and how to foster a thriving worm herd.
@@ -94,19 +94,22 @@ export const wormBookList = [
     The author demonstrates that worm composting is a year-round activity that is easy, fast, convenient, good for the earth, good for your plants, and fun. If you are the type of person who takes responsibility for their own food waste and likes growing plants with homemade compost, this book, How to Start a Worm Bin, is for you!`,
   },
   {
-    productType:'book',
+    productType: 'book',
 
-    title: 'Worm Farming: An Essential Guide to Vermiculture, Vermicomposting, and Making Worm Bins (Sustainable Gardening)',
-    imgLink: 'https://m.media-amazon.com/images/I/51BfyUgaZFL._SY445_SX342_.jpg',
+    title:
+      'Worm Farming: An Essential Guide to Vermiculture, Vermicomposting, and Making Worm Bins (Sustainable Gardening)',
+    imgLink:
+      'https://m.media-amazon.com/images/I/51BfyUgaZFL._SY445_SX342_.jpg',
     price: 'Click To Discover',
     buyLink: [
       {
         marketPlace: 'amazon',
-        marketLink: 'https://www.amazon.com/Worm-Farming-Essential-Vermiculture-Vermicomposting/dp/B09FBTVZJD/ref=d_pd_sim_sccl_2_3/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=B09FBTVZJD&psc=1',
+        marketLink:
+          'https://www.amazon.com/Worm-Farming-Essential-Vermiculture-Vermicomposting/dp/B09FBTVZJD/ref=d_pd_sim_sccl_2_3/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=B09FBTVZJD&psc=1',
       },
     ],
-    author: ['Dion Rosser',],
-    category: ['Business', 'Sustainable-Living'],
+    author: ['Dion Rosser'],
+    categories: ['Business', 'Sustainable-Living'],
     description: `Discover how to build a worm farm and create “black gold” for your garden!
 
     Have you wondered what worm farming is and how it can benefit you?
@@ -134,17 +137,19 @@ export const wormBookList = [
     `,
   },
   {
-    productType:'book',
+    productType: 'book',
 
-    title: 'Worm Farming: The Practical Guide to This Unique Form of Natural Composting…',
+    title:
+      'Worm Farming: The Practical Guide to This Unique Form of Natural Composting…',
     imgLink: 'https://m.media-amazon.com/images/I/61g2EZARM2L._SY342_.jpg',
     price: 'Click To Discover',
-    author: ['Aaron "Worm" Jones',],
-    category: ['Husbandry'],
+    author: ['Aaron "Worm" Jones'],
+    categories: ['Husbandry'],
     buyLink: [
       {
         marketPlace: 'amazon',
-        marketLink: 'https://www.amazon.com/Worm-Farming-Practical-Natural-Composting/dp/3967720012/ref=d_pd_sim_sccl_2_2/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=3967720012&psc=1',
+        marketLink:
+          'https://www.amazon.com/Worm-Farming-Practical-Natural-Composting/dp/3967720012/ref=d_pd_sim_sccl_2_2/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=3967720012&psc=1',
       },
     ],
     description: `If you want to learn more about the unique form of composting that is worm farming, then keep reading…
@@ -175,32 +180,34 @@ export const wormBookList = [
   },
 
   {
-    productType:'book',
+    productType: 'book',
 
     title: `Let It Rot!: The Gardener's Guide to Composting`,
     imgLink: 'https://m.media-amazon.com/images/I/61MCh5RJ0EL._SY342_.jpg',
     price: 'Click To Discover',
-    author: ['Stu Campbell',],
-    category: ['Composting'],
+    author: ['Stu Campbell'],
+    categories: ['Composting'],
     buyLink: [
       {
         marketPlace: 'amazon',
-        marketLink: 'https://www.amazon.com/Let-Rot-Composting-Down-Earth/dp/1580170234/ref=d_pd_sim_sccl_2_6/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=1580170234&psc=1',
+        marketLink:
+          'https://www.amazon.com/Let-Rot-Composting-Down-Earth/dp/1580170234/ref=d_pd_sim_sccl_2_6/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=1580170234&psc=1',
       },
     ],
     description: `Transform leaves, grass, and kitchen scraps into gardener’s gold! This easy-to-use guide shows you how to turn household garbage and backyard refuse into nutrient-filled compost that can nourish your soil and promote a thriving garden. You’ll soon be saving money, minimizing waste, and enjoying bountiful harvests.`,
   },
   {
-    productType:'book',
+    productType: 'book',
     title: `Composting Made Easy: Beginner's Guide to Quickly and Effortlessly Composting Kitchen Waste, Even in Your Apartment | Boost Productivity and Soil Health Naturally`,
     imgLink: 'https://m.media-amazon.com/images/I/71jhM0+ScmL._SY342_.jpg',
     price: 'Click To Discover',
-    author: ['Jacob A. Moore',],
-    category: ['Composting'],
+    author: ['Jacob A. Moore'],
+    categories: ['Composting'],
     buyLink: [
       {
         marketPlace: 'amazon',
-        marketLink: 'https://www.amazon.com/Composting-Made-Easy-Effortlessly-Productivity/dp/B0BLJC1VN2/ref=d_pd_sim_sccl_3_2/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=B0BLJC1VN2&psc=1',
+        marketLink:
+          'https://www.amazon.com/Composting-Made-Easy-Effortlessly-Productivity/dp/B0BLJC1VN2/ref=d_pd_sim_sccl_3_2/138-6572478-0683569?content-id=amzn1.sym.eb616d98-73b6-4f12-8913-a35cc29165e9&pd_rd_i=B0BLJC1VN2&psc=1',
       },
     ],
     description: `Would you like to reuse the scraps you produce from cooking but you don't have a garden? Need to learn more about this topic and know where to start? Do you want to start composting but fear in a smelly and poor-quality result?
@@ -231,19 +238,21 @@ export const wormBookList = [
     AND MUCH, MUCH MORE!`,
   },
   {
-      productType:'book',
-      title: 'Soil Science For Regenerative Agriculture: A Comprehensive Guide To Living Soil, No-Till Gardening, Composting, And Natural Farming - Complete With A Step-By-Step Action Plan To Quickly Grow Soil',
-      imgLink: 'https://m.media-amazon.com/images/I/71zz078BsgL._SY342_.jpg',
-      price: 'Click To Discover',
-      author: ['Amélie des Plantes',],
-  category: ['compost', 'soil science', 'natural farming'],
-      buyLink: [
-        {
-          marketPlace: 'amazon',
-          marketLink: 'https://www.amazon.com/dp/B0C2S5MY41/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B0C2S5MY41&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-        },
-      ],
-      description: `Work with nature to consistently grow the highest quality produce—all while doing your part in fighting climate change and helping the environment.
+    productType: 'book',
+    title:
+      'Soil Science For Regenerative Agriculture: A Comprehensive Guide To Living Soil, No-Till Gardening, Composting, And Natural Farming - Complete With A Step-By-Step Action Plan To Quickly Grow Soil',
+    imgLink: 'https://m.media-amazon.com/images/I/71zz078BsgL._SY342_.jpg',
+    price: 'Click To Discover',
+    author: ['Amélie des Plantes'],
+    categories: ['compost', 'soil science', 'natural farming'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/B0C2S5MY41/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B0C2S5MY41&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `Work with nature to consistently grow the highest quality produce—all while doing your part in fighting climate change and helping the environment.
 
       Are you stressed out about…
 
@@ -282,21 +291,23 @@ export const wormBookList = [
       Even if you don’t think you have a green thumb and don’t have the slightest idea of what soil science is, you’ll be able to boost your soil quality in no time with these simple techniques.
 
       Give back to our Earth by giving back to the Earth—starting today!`,
-    },
-    {
-      productType:'book',
-      title: 'Composting: The Garden Gold: [6 in 1] From Waste to Wealth: Boosting Soil Productivity and Embracing a Greener Lifestyle',
-      imgLink: 'https://m.media-amazon.com/images/I/71NIN+dzCEL._SY342_.jpg',
-      price: 'Click To Discover',
-      author: ['Oliver Thorne',],
-  category: ['compost',],
-      buyLink: [
-        {
-          marketPlace: 'amazon',
-          marketLink: 'https://www.amazon.com/dp/B0C8QSW1NV/ref=sspa_dk_detail_5?psc=1&pd_rd_i=B0C8QSW1NV&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-        },
-      ],
-      description: `Transform Your Waste into Garden Gold: Unearth the Secrets of Composting and Unleash Your Soil's Potential with This Essential Guide
+  },
+  {
+    productType: 'book',
+    title:
+      'Composting: The Garden Gold: [6 in 1] From Waste to Wealth: Boosting Soil Productivity and Embracing a Greener Lifestyle',
+    imgLink: 'https://m.media-amazon.com/images/I/71NIN+dzCEL._SY342_.jpg',
+    price: 'Click To Discover',
+    author: ['Oliver Thorne'],
+    categories: ['compost'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/B0C8QSW1NV/ref=sspa_dk_detail_5?psc=1&pd_rd_i=B0C8QSW1NV&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `Transform Your Waste into Garden Gold: Unearth the Secrets of Composting and Unleash Your Soil's Potential with This Essential Guide
       Are you tired of throwing away food at the end of each day? Worried about the impact of waste on the environment? Or perhaps, you aspire to live more sustainably while improving your garden's yield?
 
       If so, "COMPOSTING: THE GARDEN GOLD" holds all the answers you've been seeking.
@@ -316,21 +327,23 @@ export const wormBookList = [
       And much more…
 
       You might be thinking you don't have the time or energy for composting. But with this guide, you'll see that it's simpler than you think. Composting isn't just a technique—it's a way of life that brings balance and health to your lifestyle and your garden.`,
-    },
-    {
-      productType:'book',
-      title: 'Worm Farming Business Handbook: A Worm Farmers Guide to Setting Up and Sustaining a Worm Composting and Vermiculture System',
-      imgLink: 'https://m.media-amazon.com/images/I/71I+VwRWC-L._SY342_.jpg',
-      price: 'Click To Discover',
-      author: ['Zera Brooks',],
-  category: ['husbandry', 'business'],
-      buyLink: [
-        {
-          marketPlace: 'amazon',
-          marketLink: 'https://www.amazon.com/dp/B0BBWC5FRH/ref=sspa_dk_detail_9?psc=1&pd_rd_i=B0BBWC5FRH&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-        },
-      ],
-      description: `The demand for worm compost is rapidly increasing as part of driving environmental sustainability and as fertilizers for the plants and soil. In light of this among many other reasons, venturing into a business like worm farming is the ideal thing to do.
+  },
+  {
+    productType: 'book',
+    title:
+      'Worm Farming Business Handbook: A Worm Farmers Guide to Setting Up and Sustaining a Worm Composting and Vermiculture System',
+    imgLink: 'https://m.media-amazon.com/images/I/71I+VwRWC-L._SY342_.jpg',
+    price: 'Click To Discover',
+    author: ['Zera Brooks'],
+    categories: ['husbandry', 'business'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/B0BBWC5FRH/ref=sspa_dk_detail_9?psc=1&pd_rd_i=B0BBWC5FRH&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `The demand for worm compost is rapidly increasing as part of driving environmental sustainability and as fertilizers for the plants and soil. In light of this among many other reasons, venturing into a business like worm farming is the ideal thing to do.
 
       This book is for you if:
 
@@ -359,21 +372,23 @@ export const wormBookList = [
       So, what more are you waiting for?
 
       Ready to get started?`,
-    },
-    {
-      productType:'book',
-      title: 'The Ultimate Guide To Worm Farming:: How to Raise and Harvest Worms for Sustainable Agriculture and Organic Composting (Harvesting the Earth: A Journey Through the Seasons of Farming)',
-      imgLink: 'https://m.media-amazon.com/images/I/715K5jeYc4L._SY342_.jpg',
-      price: 'Click To Discover',
-      author: ['George J. Kelley',],
-  category: ['husbandry','business'],
-      buyLink: [
-        {
-          marketPlace: 'amazon',
-          marketLink: 'https://www.amazon.com/dp/B0BW2ZM1FQ/ref=sspa_dk_detail_1?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-        },
-      ],
-      description: `This book, "The Ultimate Guide to Worm Farming," is the ultimate resource for anyone looking to raise and harvest worms for organic composting and sustainable agriculture.
+  },
+  {
+    productType: 'book',
+    title:
+      'The Ultimate Guide To Worm Farming:: How to Raise and Harvest Worms for Sustainable Agriculture and Organic Composting (Harvesting the Earth: A Journey Through the Seasons of Farming)',
+    imgLink: 'https://m.media-amazon.com/images/I/715K5jeYc4L._SY342_.jpg',
+    price: 'Click To Discover',
+    author: ['George J. Kelley'],
+    categories: ['husbandry', 'business'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/B0BW2ZM1FQ/ref=sspa_dk_detail_1?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `This book, "The Ultimate Guide to Worm Farming," is the ultimate resource for anyone looking to raise and harvest worms for organic composting and sustainable agriculture.
 
       Worm farming is something that many people don't even know about. Many people need to be made aware that some worm species may be grown, harvested, and exchanged for cash. Worm farming is rising in popularity, especially as an element of organic natural gardening methods.
 
@@ -394,21 +409,23 @@ export const wormBookList = [
       Advanced Worm Farming Techniques
       ... And Many More.
       By buying this book, you will gain a wealth of knowledge on how to set up and maintain your worm farm, maximize the benefits of organic composting, and use it for sustainable agriculture. This book is meant for gardeners, farmers, and compost enthusiasts of all levels.`,
-    },
-    {
-      productType:'book',
-      title: 'A Spoonful Of Soil Helps The World Go Round: Basic soil science, testing, amendments, composting, cover crops and watering techniques',
-      imgLink: 'https://m.media-amazon.com/images/I/71i37wP4N0L._SY342_.jpg',
-      price: 'Click To Discover',
-      author: ['Nydia Needham',],
-  category: ['soil science', 'compost'],
-      buyLink: [
-        {
-          marketPlace: 'amazon',
-          marketLink: 'https://www.amazon.com/dp/1915217156/ref=sspa_dk_detail_1?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-        },
-      ],
-      description: `There is no aspect of agriculture that is more important and fundamental than soil, yet we are losing vast quantities of it every day to development of land, destruction of forests, erosion and pollution. Without soil, we would not survive – plants couldn’t grow, trees couldn’t grow tall and earthworms and insects would have no home. Soil also helps biodiversity – it provides habitats for organisms such as fungi, microbes and insects, as well as for the roots of plants.
+  },
+  {
+    productType: 'book',
+    title:
+      'A Spoonful Of Soil Helps The World Go Round: Basic soil science, testing, amendments, composting, cover crops and watering techniques',
+    imgLink: 'https://m.media-amazon.com/images/I/71i37wP4N0L._SY342_.jpg',
+    price: 'Click To Discover',
+    author: ['Nydia Needham'],
+    categories: ['soil science', 'compost'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/1915217156/ref=sspa_dk_detail_1?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `There is no aspect of agriculture that is more important and fundamental than soil, yet we are losing vast quantities of it every day to development of land, destruction of forests, erosion and pollution. Without soil, we would not survive – plants couldn’t grow, trees couldn’t grow tall and earthworms and insects would have no home. Soil also helps biodiversity – it provides habitats for organisms such as fungi, microbes and insects, as well as for the roots of plants.
 
       Not only is looking after our soil important for all living things and in the fight against climate change, knowing how best to meet your soil’s needs is a key task for every keen gardener, ensuring you get the most out of your garden.
 
@@ -433,21 +450,23 @@ export const wormBookList = [
       And you’ll learn how to be an expert with soil in no time!
 
       So if you want to be the proud owner of lots of home-grown fruit & vegetables and do your bit to help the planet at the same time, then scroll up and click the “Add to Cart” button now!`,
-    },
-    {
-      productType:'book',
-      title: `Worm Farming 101: A Beginner's Guide to the Basics of Worm Farming Through Composting and Vermicomposting so That You Can Create a Worm Farm as a Hobby or as a Business`,
-      imgLink: 'https://m.media-amazon.com/images/I/41+zE0oXIWS._SY445_SX342_.jpg',
-      price: 'Click To Discover',
-      author: ['Jeremy Nash',],
-  category: ['Category',],
-      buyLink: [
-        {
-          marketPlace: 'amazon',
-          marketLink: 'https://www.amazon.com/dp/1708528628/ref=sspa_dk_detail_0?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-        },
-      ],
-      description: `Creating a worm farm from scratch is easier than you think. By using compost with worms you can get a greater quality of soil due to the casting from those exact worm.
+  },
+  {
+    productType: 'book',
+    title: `Worm Farming 101: A Beginner's Guide to the Basics of Worm Farming Through Composting and Vermicomposting so That You Can Create a Worm Farm as a Hobby or as a Business`,
+    imgLink:
+      'https://m.media-amazon.com/images/I/41+zE0oXIWS._SY445_SX342_.jpg',
+    price: 'Click To Discover',
+    author: ['Jeremy Nash'],
+    categories: ['Category'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/1708528628/ref=sspa_dk_detail_0?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&s=books&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `Creating a worm farm from scratch is easier than you think. By using compost with worms you can get a greater quality of soil due to the casting from those exact worm.
 
       When using regular soil, you may have to concern yourself with unfamiliar toxins. However, a quality organic soil which you gain as a result of worm farming will make sure that you do not have to worry about those things. Teaching you how to do that is what this book is all about.
 
@@ -468,24 +487,27 @@ export const wormBookList = [
       •And much more!
 
       This isn't just about worms. Compost which you create can be also used as a fertilizer for your plants and garden. If you are doing everything correctly, then you will not need to concern yourself with pesticides and chemicals and any of that harmful stuff.`,
-    },
-       {
-        productType:'book',
-        title: 'How To Start A Worm Farm - Guide To Vermiculture, Vermicomposting and Worm Farming',
-        imgLink: 'https://m.media-amazon.com/images/I/61cKPS2gloL._SX342_SY445_.jpg',
-        price: 'Click To Discover',
-        author: ['Soluciones Tainas',],
-    category: ['business',],
-        buyLink: [
-          {
-            marketPlace: 'amazon',
-            marketLink: 'https://www.amazon.com/dp/B00AQKM1FG/ref=sspa_dk_detail_1?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
-          },
-        ],
-        description: `Want your garden to grow greener without you having to resort to applying chemical fertilizers? Worms are the answer! A worm farm can keep you supplied with compost that will help you to keep your garden thriving, and it's not hard to get one started when you know the best way to do it. "How to Start a Worm Farm" will teach you everything you need to know to establish a worm farm and use it to produce compost.
+  },
+  {
+    productType: 'book',
+    title:
+      'How To Start A Worm Farm - Guide To Vermiculture, Vermicomposting and Worm Farming',
+    imgLink:
+      'https://m.media-amazon.com/images/I/61cKPS2gloL._SX342_SY445_.jpg',
+    price: 'Click To Discover',
+    author: ['Soluciones Tainas'],
+    categories: ['business'],
+    buyLink: [
+      {
+        marketPlace: 'amazon',
+        marketLink:
+          'https://www.amazon.com/dp/B00AQKM1FG/ref=sspa_dk_detail_1?psc=1&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw',
+      },
+    ],
+    description: `Want your garden to grow greener without you having to resort to applying chemical fertilizers? Worms are the answer! A worm farm can keep you supplied with compost that will help you to keep your garden thriving, and it's not hard to get one started when you know the best way to do it. "How to Start a Worm Farm" will teach you everything you need to know to establish a worm farm and use it to produce compost.
 
         "How to Start a Worm Farm" is a step-by-step guide that anyone can follow to get a small or large worm farm underway. The guide covers everything from space needs to feeding to what to do with all of the compost that you'll soon be making. In addition, the e-book discusses why worm farming is beneficial for gardeners, fishermen and even entrepreneurs who want to start their own businesses. Easy to read and highly informative, "How to Start a Worm Farm" is the absolute best resource on all things related to worm farming.
 
         Whether you've been considering starting a worm farm for years or have only now just discovered its benefits, "How to Start a Worm Farm" will make it possible for you to start a worm farm in no time. Download your copy today, and you'll soon be on your way to a seemingly endless supply of fishing bait or the most nutrient-rich compost possible!`,
-      },
+  },
 ];

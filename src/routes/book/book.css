@@ -2,6 +2,8 @@
     border: red 3px solid ;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
 }
 

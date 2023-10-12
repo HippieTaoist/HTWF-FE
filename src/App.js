@@ -6,7 +6,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import Home from './routes/home/Home';
 
 // Import Layout
+import BlogPostLayout from './components/layouts/BlogPostsLayout';
+import BookstoreLayout from './components/layouts/BookstoreLayout';
+import HomeLayout from './components/layouts/HomeLayout';
 import Layout from './components/layouts/Layout';
+
+import UserLayout from './components/layouts/UserLayout';
 
 // Import from User Component Folder
 import CreateUser from './routes/user/User-Create';
@@ -15,11 +20,13 @@ import ShowUserDetails from './routes/user/User-Details';
 import Profile from './routes/user/Profile/Profile';
 
 //Import from  BlogPost Component Folder
-import CreateBlogPost from './routes/blog-post/BlogPost-Create';
-import ShowBlogPostList from './routes/blog-post/BlogPost-List';
-import ShowBlogPostDetails from './routes/blog-post/BlogPost-Details';
-import UpdateBlogPost from './routes/blog-post/BlogPost-Update';
-import DeleteBlogPost from './routes/blog-post/BlogPost-Delete';
+import CreateBlogPost from './routes/blog-post/backend/BlogPost-Create';
+import ShowBlogPostList from './routes/blog-post/backend/BlogPost-List';
+import ShowBlogPostDetails from './routes/blog-post/backend/BlogPost-Details';
+import ShowBlogPostDetail	 from './routes/blog-post/BlogPost-Detail';
+
+import UpdateBlogPost from './routes/blog-post/backend/BlogPost-Update';
+import DeleteBlogPost from './routes/blog-post/backend/BlogPost-Delete';
 
 //Import From Book Component Folder
 import CreateBook from './routes/book/Book-Create';
@@ -27,6 +34,10 @@ import ShowBookList from './routes/book/Book-List';
 import ShowBookDetails from './routes/book/Book-Details';
 import UpdateBookInfo from './routes/book/Book-Update';
 import DeleteBook from './routes/book/Book-Delete';
+
+//import from Husbandry Route folder
+import ShowHusbandryArticleList from './routes/husbandry/HusbandryArticle-List';
+import ShowHusbandryArticleDetails from './routes/husbandry/HusbandryArticle-Details';
 
 // Import From Joke Meme Component Folder
 import CreateJokeMeme from './routes/jokes-and-memes/Joke_Meme-Create';
@@ -44,7 +55,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import SignIn from './routes/user/SignIn/SignIn';
 
 import HoverLink from './utils/test/hoverLinkText';
-import BookstoreLayout from './components/layouts/BookstoreLayout';
+import BlogPosts from './routes/blog-post/blogs/blog-posts';
 
 const App = () => {
   return (
@@ -55,58 +66,71 @@ const App = () => {
           <Routes>
             <Route
               path='/'
-              element={<Layout />}>
-              <Route
-                index
-                element={<Home />}
-              />
+              element={<HomeLayout />}>
+              <Route element={<Home />} />
 
               {/* User Routes*/}
               <Route
-                exact
-                path='/user/sign-in'
-                element={<SignIn />}
-              />
-              <Route
-                exact
-                path='/user/sign-up'
-                element={<SignUp />}
-              />
-              <Route
-                path='/user/create'
-                element={<CreateUser />}
-              />
-              <Route
-                path='/user/show/:id'
-                element={<ShowUserDetails />}
-              />
-              <Route
-                path='/user/profile/:username'
-                element={<Profile />}
-              />
+                path='/user'
+                element={<UserLayout />}>
+                <Route
+                  path='sign-in'
+                  element={<SignIn />}
+                />
+                <Route
+                  path='sign-up'
+                  element={<SignUp />}
+                />
+                <Route
+                  path='create'
+                  element={<CreateUser />}
+                />
+                <Route
+                  path='show/:id'
+                  element={<ShowUserDetails />}
+                />
+                <Route
+                  path='profile/:username'
+                  element={<Profile />}
+                />
+              </Route>
 
               {/* Blog Post Routes */}
               <Route
-                exact
                 path='/blog-posts'
-                element={<ShowBlogPostList />}
-              />
+                element={<BlogPostLayout />}>
+                <Route index element={<BlogPosts />}/>
+                <Route
+                  path='create'
+                  element={<CreateBlogPost />}
+                />
+                <Route
+                  path='show/:index/:title'
+                  element={<ShowBlogPostDetail />}
+                />
+                <Route
+                  path='show/:id'
+                  element={<ShowBlogPostDetails />}
+                />
+                <Route
+                  path='update/:id'
+                  element={<UpdateBlogPost />}
+                />
+                <Route
+                  path='delete/:id'
+                  element={<DeleteBlogPost />}
+                />
+              </Route>
+
+              {/* Husbandry Routes */}
               <Route
-                path='/blog-post/create'
-                element={<CreateBlogPost />}
-              />
-              <Route
-                path='/blog-post/show/:username'
-                element={<ShowBlogPostDetails />}
-              />
-              <Route
-                path='/blog-post/update/:id'
-                element={<UpdateBlogPost />}
-              />
-              <Route
-                path='/blog-post/delete/:id'
-                element={<DeleteBlogPost />}
-              />
+                path='/husbandry'
+                element={<ShowHusbandryArticleList />}>
+                <Route
+                  path='show/:article'
+                  element={<ShowHusbandryArticleDetails />}
+                />
+              </Route>
 
               {/* Book Route */}
               <Route
