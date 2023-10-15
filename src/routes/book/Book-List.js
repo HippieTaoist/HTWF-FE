@@ -16,10 +16,10 @@ function ShowBookList() {
 
   let filters = useOutletContext()
 
-  console.log(filters)
+  console.log('filters:', filters)
   const [selectedFilters, setSelectedFilters] = useState({
-    category: null,
-    author: null,
+    categories: null,
+    authors: null,
   });
 
     const handleFilterClick=(filterCategory, selectedValue) => {
@@ -34,6 +34,7 @@ function ShowBookList() {
 
   useEffect(() => {
     setBooks(wormBookList);
+    console.log('books', books);
   }, [books]);
 
   const bookList =
@@ -43,7 +44,7 @@ function ShowBookList() {
 
   return (
     <div className='book-store'>
-   <div> {CategoryLister(wormBookList)}</div>
+   <div> <CategoryLister dataList={books}	/></div>
      <div className="bookstore-navigation">
         {/* Example: Category Filter */}
         <button
